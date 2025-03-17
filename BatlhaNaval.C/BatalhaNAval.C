@@ -5,15 +5,29 @@ int main(){
     int tabuleiro [10][10]={0};
     int LinhaHorizontal=3,ColunaHorizontal=2;
     int LinhaVertical=5,ColunaVertical=6;
+    // D = direita E= esquerdo
+    int LinhaDiagonalED=5 ,ColunaED=1 ;
+    int LinhaDiagonalDE=0 ,ColunaDE=9 ;
     //Navio 1
     for(int x=0;x<3;x++){
-        tabuleiro[LinhaHorizontal][ColunaHorizontal + x] =3;
+        tabuleiro[LinhaHorizontal][ColunaHorizontal + x]=3 ;
     }
     //Navio 2
     for(int y=0;y<3;y++){
         tabuleiro[LinhaVertical + y][ColunaVertical]=3;
     }
-    printf("Tabuleiro batalha naval\n");
+    //Navio 3
+    for(int x=0;x<3;x++){
+    tabuleiro[LinhaDiagonalED+x ][ColunaED+x ]=3;
+    }
+     //Navio 4
+    for(int x=0;x<3;x++){
+    tabuleiro[LinhaDiagonalDE +x ][ColunaDE-x]=3;
+    }
+    
+    
+    
+    printf("-----Tabuleiro batalha naval-----\n");
     printf("    A  B  C  D  E  F  G  H  I  J\n");
     //Numeros do lado esquerdo
     for(int x=0;x<10;x++){
